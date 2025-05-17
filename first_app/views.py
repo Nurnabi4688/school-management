@@ -11,7 +11,7 @@ def Signup(request):
             form.save()
             return redirect('student_list')
     else:
-        form=RegisterForm
+        form=RegisterForm()
     return render(request,'register.html',{'form':form})
 
 def base(request):
