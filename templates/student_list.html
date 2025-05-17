@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table class="table table-hover table-light">
+    <thead>
+      <tr>
+        <th scope="col">SL</th>
+        <th scope="col">Name</th>
+        <th scope="col">Father_name</th>
+        <th scope="col">Mother_name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Phone_no</th>
+        <th scope="col">Email</th>
+        <th scope="col">Department</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    {% for d in data %}
+    <tbody>
+      <tr>
+        <th scope="row">{{d.id}}</th>
+        <td>{{d.name}}</td>
+        <td>{{d.father_name}}</td>
+        <td>{{d.mother_name}}</td>
+        <td>{{d.gender}}</td>
+        <td>{{d.phone_no}}</td>
+        <td>{{d.email}}</td>
+        <td>{{d.department}}</td>
+        <td><i class="fa-solid fa-trash"></i>delete</td>
+
+
+
+      </tr>
+      {% endfor %}
+      
+    </tbody>
+  </table>
+  
+{% endblock %}
