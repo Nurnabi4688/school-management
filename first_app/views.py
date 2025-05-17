@@ -12,10 +12,10 @@ def Signup(request):
             return redirect('student_list')
     else:
         form=RegisterForm
-    return render(request,'index.html',{'form':form})
+    return render(request,'register.html',{'form':form})
 
 def base(request):
-    return render(request,'base.html')
+    return render(request,'index.html')
 
 def student_list(request):
     data=Register.objects.all()
